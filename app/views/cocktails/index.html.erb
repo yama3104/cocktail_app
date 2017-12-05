@@ -11,14 +11,15 @@
   
   <%= yield %>
 
-  <%= link_to "一覧", :controller => "cocktails", :action => "index" %>
+  <%= link_to "一覧", :controller => "cocktails", :action => "index" %></br>
 
+  <%= link_to "とりあえず基本の", :controller => "table", :action => "show" %>
 
   <div class="row">
     <% @cocktail.each do |cocktail| %>
     <div class="col-sm-4 col-xs-6">
       <div class="box11">
-	<%= link_to cocktail.name,cocktails_show_path(cocktail.name)%></br>
+	<%= link_to cocktail.name,cocktail_path(cocktail.id)%></br>
 	<%= cocktail.base %></br>
 	<%= cocktail.mixer %>
       </div>

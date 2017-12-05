@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'table/show'
+
   get 'cocktails/index'
 
   get 'cocktails/show'
