@@ -1,8 +1,9 @@
 class CocktailsController < ApplicationController
   def index
-       @cocktail = Cocktail.all
+    @cocktail = Cocktail.search(params[:search])
   end
 
-  def show   
+  def show
+    @cocktail = Cocktail.find(params[:id])
   end
 end
