@@ -15,4 +15,4 @@
 <p> 割材　 :　<%= @cocktail.mixer %> </p>
 <p> その他 :　<%= @cocktail.other %> </p>
 
-
+<p> <%= link_to cocktails_path(:search => @cocktail.base) do%> <%= @cocktail.base %> <% end %></p>
