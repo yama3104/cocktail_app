@@ -11,8 +11,6 @@
   <%= yield %>
 
 <p> 名前　 :　<%= @cocktail.name %> </p>
-<p> ベース :　<%= @cocktail.base %> </p>
-<p> 割材　 :　<%= @cocktail.mixer %> </p>
-<p> その他 :　<%= @cocktail.other %> </p>
-
-<p> <%= link_to cocktails_path(:search => @cocktail.base) do%> <%= @cocktail.base %> <% end %></p>
+<p> ベース :　<%= link_to cocktails_path(:search => @cocktail.base) do%> <%= @cocktail.base %> <% end %></p>
+<p> 割材　 :　<%= link_to cocktails_path(:search => @cocktail.mixer) do%> <%= @cocktail.mixer %> <% end %></p>
+<p> その他 :　<%= link_to cocktails_path(:search => @cocktail.other) do%> <%= @cocktail.other %> <% end %></p>
