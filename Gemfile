@@ -64,3 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass', '3.3.7'
 
 gem 'bcrypt',         '3.1.11'
+
+#pagination
+gem 'kaminari', '~> 0.17.0'
