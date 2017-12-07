@@ -16,7 +16,7 @@
 <p> その他 :　<%= link_to cocktails_path(:search => @cocktail.other) do%> <%= @cocktail.other %> <% end %></p>
 
 
-<%= pie_chart [[@cocktail.base, 1], [@cocktail.mixer, 1]]%>
+<%= pie_chart [[@cocktail.base, @cocktail.bratio], [@cocktail.mixer, @cocktail.mratio]]%>
 
 </div>
 
