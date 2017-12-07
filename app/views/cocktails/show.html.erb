@@ -1,5 +1,5 @@
 <h1>詳細ページ</h1>
-
+<div class="container">
 
 <%= form_tag cocktails_path, :method => 'get' do %> 
   <p>
@@ -14,3 +14,9 @@
 <p> ベース :　<%= link_to cocktails_path(:search => @cocktail.base) do%> <%= @cocktail.base %> <% end %></p>
 <p> 割材　 :　<%= link_to cocktails_path(:search => @cocktail.mixer) do%> <%= @cocktail.mixer %> <% end %></p>
 <p> その他 :　<%= link_to cocktails_path(:search => @cocktail.other) do%> <%= @cocktail.other %> <% end %></p>
+
+
+<%= pie_chart [[@cocktail.base, 1], [@cocktail.mixer, 1]]%>
+
+</div>
+

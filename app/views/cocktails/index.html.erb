@@ -21,11 +21,12 @@
       <div class="box11">
 	<%= link_to cocktail.name,cocktail_path(cocktail.id)%></br>
 	<%= cocktail.base %></br>
-	<%= cocktail.mixer %>
+	<%= cocktail.mixer %></br>
+	<%= pie_chart [[cocktail.base, 1], [cocktail.mixer, 1]] %>
       </div>
       
     </div>
     <% end %>
   </div>
-  <%= paginate @cocktail %>
+  <%= paginate @cocktail, :window => 2 %>
 </div>
