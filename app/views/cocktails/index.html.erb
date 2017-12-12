@@ -22,7 +22,18 @@
 	<%= link_to cocktail.name,cocktail_path(cocktail.id)%></br>
 	<%= cocktail.base %></br>
 	<%= cocktail.mixer %></br>
-	<%= pie_chart [[cocktail.base, cocktail.bratio], [cocktail.mixer, cocktail.mratio]] %>
+	<% if cocktail.other == '' %>
+	</br>
+	<%= pie_chart [[cocktail.base, cocktail.bratio],
+	               [cocktail.mixer, cocktail.mratio]],
+	               colors:[cocktail.bcolor,cocktail.mcolor]%>
+	<% else %>
+	<%= cocktail.other %></br>
+	<%= pie_chart [[cocktail.base, cocktail.bratio],
+	               [cocktail.mixer, cocktail.mratio],
+	               [cocktail.other, cocktail.oratio]],
+	               colors:[cocktail.bcolor,cocktail.mcolor,cocktail.ocolor] %>
+	<% end %>
       </div>
       
     </div>

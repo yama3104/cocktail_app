@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171207124343) do
+ActiveRecord::Schema.define(version: 20171211004746) do
 
   create_table "cocktails", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,10 @@ ActiveRecord::Schema.define(version: 20171207124343) do
     t.integer "bratio"
     t.integer "mratio"
     t.integer "oratio"
+    t.string "bcolor"
+    t.string "mcolor"
+    t.string "ocolor"
+    t.text "detail"
   end
 
 end

@@ -7,13 +7,32 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#ビール gold
+#ジンジャーエール yellowgreen
+#トマトジュース tomato
+#コーラ saddlebrown
+#ピーチ pink
+#オレンジ　orange
+#ウーロン茶 goldenrod
+#ライム limegreen
+#ウォッカ mediumblue
+#グレープフルーツ lightsalmon
+#カンパリ crimson
+#白ワイン lemonchiffon
+#赤ワイン mediumvioletred
+#ソーダ lightskyblue
+#カシス red
+
 Cocktail.create(name: 'シャンディーガフ',
                 base: 'ビール',
                 mixer: 'ジンジャーエール',
                 other: '',
                 bratio: 1,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'gold',
+                mcolor: 'yellowgreen',
+                ocolor: '')
 
 Cocktail.create(name: 'レッドアイ',
                 base: 'ビール',
@@ -21,7 +40,10 @@ Cocktail.create(name: 'レッドアイ',
                 other: '',
                 bratio: 1,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'gold',
+                mcolor: 'tomato',
+                ocolor: '')
 
 Cocktail.create(name: 'ディーゼル',
                 base: 'ビール',
@@ -29,7 +51,10 @@ Cocktail.create(name: 'ディーゼル',
                 other: '',
                 bratio: 1,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'gold',
+                mcolor: 'saddlebrown',
+                ocolor: '')
 
 Cocktail.create(name: 'ファジーネーブル',
                 base: 'ピーチリキュール',
@@ -37,7 +62,10 @@ Cocktail.create(name: 'ファジーネーブル',
                 other: '',
                 bratio: 1,
                 mratio: 4,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'pink',
+                mcolor: 'orange',
+                ocolor: '')
 
 Cocktail.create(name: 'ピーチウーロン',
                 base: 'ピーチリキュール',
@@ -45,15 +73,21 @@ Cocktail.create(name: 'ピーチウーロン',
                 other: '',
                 bratio: 1,
                 mratio: 3,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'pink',
+                mcolor: 'goldenrod',
+                ocolor: '')
 
 Cocktail.create(name: 'モスコミュール',
                 base: 'ウォッカ',
                 mixer: 'ライムジュース',
-                other: 'ジンジャーエール(適量)',
+                other: 'ジンジャーエール',
                 bratio: 3,
                 mratio: 1,
-                oratio: 0)
+                oratio: 6,
+                bcolor: 'gold',
+                mcolor: 'limegreen',
+                ocolor: 'yellowgreen')
 
 Cocktail.create(name: 'ソルティドッグ',
                 base: 'ウォッカ',
@@ -61,7 +95,10 @@ Cocktail.create(name: 'ソルティドッグ',
                 other: '',
                 bratio: 3,
                 mratio: 4,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'mediumblue',
+                mcolor: 'lightsalmon',
+                ocolor: '')
 
 Cocktail.create(name: 'カンパリ・ビア',
                 base: 'ビール',
@@ -69,7 +106,10 @@ Cocktail.create(name: 'カンパリ・ビア',
                 other: '',
                 bratio: 5,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'gold',
+                mcolor: 'crimson',
+                ocolor: '')
 
 Cocktail.create(name: 'スプリッツァー',
                 base: '白ワイン',
@@ -77,7 +117,10 @@ Cocktail.create(name: 'スプリッツァー',
                 other: '',
                 bratio: 3,
                 mratio: 2,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'lemonchiffon',
+                mcolor: 'lightskyblue',
+                ocolor: '')
 
 Cocktail.create(name: 'キール',
                 base: '白ワイン',
@@ -85,7 +128,10 @@ Cocktail.create(name: 'キール',
                 other: '',
                 bratio: 4,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'lemonchiffon',
+                mcolor: 'red',
+                ocolor: '')
 
 Cocktail.create(name: 'カーディナル',
                 base: '赤ワイン',
@@ -93,7 +139,10 @@ Cocktail.create(name: 'カーディナル',
                 other: '',
                 bratio: 4,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'mediumvioletred',
+                mcolor: 'red',
+                ocolor: '')
 
 Cocktail.create(name: 'キールロワイヤル',
                 base: 'シャンパン',
@@ -101,7 +150,10 @@ Cocktail.create(name: 'キールロワイヤル',
                 other: '',
                 bratio: 4,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'lemonchiffon',
+                mcolor: 'red',
+                ocolor: '')
 
 Cocktail.create(name: 'キティ',
                 base: '赤ワイン',
@@ -109,7 +161,10 @@ Cocktail.create(name: 'キティ',
                 other: '',
                 bratio: 1,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'mediumvioletred',
+                mcolor: 'yellowgreen',
+                ocolor: '')
 
 Cocktail.create(name: 'オペレーター',
                 base: '白ワイン',
@@ -117,7 +172,10 @@ Cocktail.create(name: 'オペレーター',
                 other: '',
                 bratio: 1,
                 mratio: 1,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'lemonchiffon',
+                mcolor: 'yellowgreen',
+                ocolor: '')
 
 Cocktail.create(name: 'カルーアミルク',
                 base: 'カルーアリキュール',
@@ -125,7 +183,10 @@ Cocktail.create(name: 'カルーアミルク',
                 other: '',
                 bratio: 1,
                 mratio: 4,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'sienna',
+                mcolor: 'floralwhite',
+                ocolor: '')
 
 Cocktail.create(name: 'カンパリオレンジ',
                 base: 'カンパリ',
@@ -133,7 +194,10 @@ Cocktail.create(name: 'カンパリオレンジ',
                 other: '',
                 bratio: 1,
                 mratio: 3,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'crimson',
+                mcolor: 'orange',
+                ocolor: '')
   
 Cocktail.create(name: 'カンパリソーダ',
                 base: 'カンパリ',
@@ -141,7 +205,10 @@ Cocktail.create(name: 'カンパリソーダ',
                 other: '',
                 bratio: 1,
                 mratio: 3,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'crimson',
+                mcolor: 'lightskyblue',
+                ocolor: '')
 
 Cocktail.create(name: 'カシスオレンジ',
                 base: 'カシスリキュール',
@@ -149,15 +216,21 @@ Cocktail.create(name: 'カシスオレンジ',
                 other: '',
                 bratio: 1,
                 mratio: 4,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'red',
+                mcolor: 'orange',
+                ocolor: '')
 
 Cocktail.create(name: 'カシスソーダ',
                 base: 'カシスリキュール',
-                mixer: 'オレンジ',
+                mixer: 'ソーダ',
                 other: '',
                 bratio: 1,
                 mratio: 4,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'red',
+                mcolor: 'lightskyblue',
+                ocolor: '')
 
 Cocktail.create(name: 'ブラッディメアリー',
                 base: 'ウォッカ',
@@ -165,7 +238,11 @@ Cocktail.create(name: 'ブラッディメアリー',
                 other: 'レモンジュース',
                 bratio: 1,
                 mratio: 4,
-                oratio: 0)
+                oratio: 0,
+                bcolor: 'mediumblue',
+                mcolor: 'tomato',
+                ocolor: 'lemonchiffon',
+                detail: 'レモン果汁はほんのちょっとです。')
 
 
   
