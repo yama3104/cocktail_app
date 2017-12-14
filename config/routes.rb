@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'cocktails/show'
 
-  root 'cocktails#index'
+  root 'table#show'
 
   resources :cocktails
 

@@ -1,5 +1,41 @@
 <!--グラスアイコン <span class="glyphicon">&#xe001;</span> -->
 
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#target">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">タイトル</a>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="target">
+			<ul class="nav navbar-nav">
+				<li><a href="">メニューＡ</a></li>
+				<li><a href="">メニューＢ</a></li>
+				<li><a href="">メニューＣ</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<div class="container" align="center">
+<%= form_tag cocktails_path, :method => 'get' do %> 
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <% end %>
+  
+  <%= yield %>
+</div>
+  
+  
+<!--
 <table class="table1">
 　<tr>
 　　<th></th>
@@ -17,3 +53,4 @@
 　　<td></td>
 　</tr>
 </table>
+-->
