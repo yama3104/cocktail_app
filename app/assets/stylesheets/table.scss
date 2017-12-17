@@ -5,6 +5,32 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$bgDefault      : #4c3327;
+$bgHighlight    : #c07c54;
+$colDefault     : #e7e2d9;
+$colHighlight   : #ffffff;
+$colTitle       : #fce193;
+$dropDown       : false;
+
+.box30 {
+    margin: 2em 0;
+    background: $colDefault;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+
+    .box-title {
+	font-size: 1.2em;
+	background: $bgDefault;
+	padding: 4px;
+	text-align: center;
+	color: $colHighlight;
+	font-weight: bold;
+	letter-spacing: 0.05em;  }
+
+    p {
+	padding: 15px 20px;
+	margin: 0;  }}
+
+
 
 table.table1 {
 	border-collapse: collapse;
@@ -36,4 +62,66 @@ table.table1 td {
 	vertical-align: top;
 	border-right: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
+}
+
+//ナビゲーションバー
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  margin: 0 auto;  
+  width:100%;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li {
+            > a {
+              color: $colDefault;
+              &:hover,  &:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight; }}
+            &.divider {
+              background-color: $bgHighlight;}}}}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
 }

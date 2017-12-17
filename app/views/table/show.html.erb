@@ -1,7 +1,9 @@
 <!--グラスアイコン <span class="glyphicon">&#xe001;</span> -->
 
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
+<head>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#target">
 				<span class="sr-only">Toggle navigation</span>
@@ -9,29 +11,61 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">タイトル</a>
+			<a class="navbar-brand" href="/">てきとーカクテル</a></br>
+			
 		</div>
 		
 		<div class="collapse navbar-collapse" id="target">
-			<ul class="nav navbar-nav">
-				<li><a href="">メニューＡ</a></li>
-				<li><a href="">メニューＢ</a></li>
-				<li><a href="">メニューＣ</a></li>
-			</ul>
+		  <ul class="nav navbar-nav">
+		  </ul>
+		  <div class="navbar-form navbar-right" >
+		   
+		      <%= form_tag cocktails_path, class: "form-inline", :method => 'get' do %>
+		      
+		      <%= text_field_tag :search, params[:search], placeholder: "検索", class: "form-control"%>
+		      <%= submit_tag "検索", :class => 'btn btn-default', :name => nil %>
+		      
+		      <% end %>
+		      <%= yield %>
+		 
+		    
+		  </div>
+	
 		</div>
 	</div>
 </nav>
 
+</head>
 
-<div class="container" align="center">
-<%= form_tag cocktails_path, :method => 'get' do %> 
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-  <% end %>
+<div class="container">
   
-  <%= yield %>
+ 
+
+
+<div class="col-xs-6 col-md-4">
+    <div class="box30">
+      <div class="box-title">ビールを使ったもの</div>
+      <p><%= link_to "シャンディーガフ",cocktail_path(1)%></p>
+      <p><%= link_to "レッドアイ",cocktail_path(2)%></p>
+      <p><%= link_to "ディーゼル",cocktail_path(3)%></p>
+      <p><%= link_to "もっと見る",cocktails_path(:search => "ビール") %></p>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <div class="box30">
+      <div class="box-title">ウォッカを使ったもの</div>
+      <p><%= link_to "モスコミュール",cocktail_path(6)%></p>
+      <p><%= link_to "もっと見る",cocktails_path(:search => "ウォッカ") %></p>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <div class="box30">
+      <div class="box-title">ワインを使ったもの</div>
+      <p><%= link_to "キティ",cocktail_path(13)%></p>
+      <p><%= link_to "オペレーター",cocktail_path(14)%></p>
+      <p><%= link_to "もっと見る",cocktails_path(:search => "ワイン") %></p>
+    </div>
+  </div>
 </div>
   
   

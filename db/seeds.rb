@@ -85,7 +85,7 @@ Cocktail.create(name: 'モスコミュール',
                 bratio: 3,
                 mratio: 1,
                 oratio: 6,
-                bcolor: 'gold',
+                bcolor: 'mediumblue',
                 mcolor: 'limegreen',
                 ocolor: 'yellowgreen')
 
