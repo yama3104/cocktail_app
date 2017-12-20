@@ -12,6 +12,10 @@ $colHighlight   : #ffffff;
 $colTitle       : #fce193;
 $dropDown       : false;
 
+body {
+  //background-color: $colTitle;
+}
+
 .box30 {
     margin: 2em 0;
     background: $colDefault;
@@ -24,45 +28,13 @@ $dropDown       : false;
 	text-align: center;
 	color: $colHighlight;
 	font-weight: bold;
-	letter-spacing: 0.05em;  }
+	letter-spacing: 0.05em;
+        font-family: YuGothic,'Yu Gothic','TsukuARdGothic-Regular','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif; }
 
     p {
 	padding: 15px 20px;
 	margin: 0;  }}
 
-
-
-table.table1 {
-	border-collapse: collapse;
-	text-align: left;
-	line-height: 1.5;
-	border-left: 1px solid #ccc;
-}
-
-table.table1 thead th {
-	padding: 10px;
-	font-weight: bold;
-	border-top: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 2px solid #c00;
-	background: #dcdcd1;
-}
-table.table1 tbody th {
-	width: 150px;
-	padding: 10px;
-	font-weight: bold;
-	vertical-align: top;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	background: #ececec;
-}
-table.table1 td {
-	width: 350px;
-	padding: 10px;
-	vertical-align: top;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-}
 
 //ナビゲーションバー
 .navbar-default {
@@ -71,7 +43,8 @@ table.table1 td {
   margin: 0 auto;  
   width:100%;
   .navbar-brand {
-    color: $colDefault;
+      color: $colDefault;
+      font-family: 'メイリオ', Meiryo,'ヒラギノ明朝 ProN','Hiragino Mincho ProN',monospace;
     &:hover, &:focus {
       color: $colHighlight; }}
   .navbar-text {
@@ -124,4 +97,10 @@ table.table1 td {
       > a, > a:hover, > a:focus {
         color: $colHighlight;
         background-color: $bgHighlight; }}}
+}
+
+.jumbotron {
+  background-image: url("top.jpg");
+  background-size: cover;
+  background-position: center 60%;
 }

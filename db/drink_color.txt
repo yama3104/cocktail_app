@@ -6,6 +6,7 @@
 #オレンジ　orange
 #ウーロン茶 goldenrod
 #ライム limegreen
+ジン red
 #ウォッカ mediumblue
 #グレープフルーツ lightsalmon
 #カンパリ crimson
@@ -16,3 +17,4 @@
 カルーア sienna
 牛乳 floralwhite
 レモンジュース lemonchiffon
+パッソア orangered

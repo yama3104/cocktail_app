@@ -244,6 +244,76 @@ Cocktail.create(name: 'ブラッディメアリー',
                 ocolor: 'lemonchiffon',
                 detail: 'レモン果汁はほんのちょっとです。')
 
+Cocktail.create(name: 'ジンリッキー',
+                base: 'ジン',
+                mixer: 'ソーダ',
+                other: 'ライム',
+                bratio: 2,
+                mratio: 1,
+                oratio: 4,
+                bcolor: 'red',
+                mcolor: 'lightskyblue',
+                ocolor: 'limegreen',
+                detail: '')
+
+Cocktail.create(name: 'ジンバック',
+                base: 'ジン',
+                mixer: 'ジンジャーエール',
+                other: 'レモンジュース',
+                bratio: 3,
+                mratio: 2,
+                oratio: 3,
+                bcolor: 'red',
+                mcolor: 'yellowgreen',
+                ocolor: 'lemonchiffon')
+
+Cocktail.create(name: 'ブラッディ・サム',
+                base: 'ジン',
+                mixer: 'トマトジュース',
+                other: '',
+                bratio: 1,
+                mratio: 4,
+                oratio: 0,
+                bcolor: 'red',
+                mcolor: 'tomato',
+                ocolor: '')
+
+Cocktail.create(name: 'カシスウーロン',
+                base: 'カシスリキュール',
+                mixer: 'ウーロン茶',
+                other: '',
+                bratio: 1,
+                mratio: 3,
+                oratio: 0,
+                bcolor: 'red',
+                mcolor: 'goldenrod',
+                ocolor: '')
+
+Cocktail.create(name: 'パッソアソーダ',
+                base: 'パッソア',
+                mixer: 'ソーダ',
+                other: '',
+                bratio: 1,
+                mratio: 4,
+                oratio: 0,
+                bcolor: 'orangered',
+                mcolor: 'lightskyblue',
+                ocolor: '')
+
+Cocktail.create(name: 'パッソアオレンジ',
+                base: 'パッソア',
+                mixer: 'オレンジ',
+                other: '',
+                bratio: 1,
+                mratio: 3,
+                oratio: 0,
+                bcolor: 'orangered',
+                mcolor: 'orange',
+                ocolor: '')
+
+
+
+
 
   
 
