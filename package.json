@@ -1,5 +1,13 @@
 {
-  "name": "cocktails_app",
+  "name": "cocktail_app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jQuery": "^1.7.4"
+  },
+  "version": "1.0.0",
+  "description": "search",
+  "main": "index.js",
+  "repository": "git@github.com:yama3104/cocktail_app.git",
+  "author": "yama3104",
+  "license": "MIT"
 }
