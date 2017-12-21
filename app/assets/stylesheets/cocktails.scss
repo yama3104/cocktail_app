@@ -5,13 +5,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$bgDefault      : #4c3327; //ヘッダーの濃い色
+$bgHighlight    : #c07c54;
+$colDefault     : #e7e2d9;
+$colHighlight   : #ffffff; //白
+$colTitle       : #fff3e6; //背景
+$colAccent      : #80BBFF; //背景の補色
+
 body { padding-top: 70px; }
 
 .box11{
     padding: 0.5em 1em;
     margin: 2em 0;
     color: #5d627b;
-    background: white;
+    background: $colDefault;
     border-top: solid 5px #5d627b;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }

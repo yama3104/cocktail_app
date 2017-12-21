@@ -27,6 +27,7 @@
   </nav>
 </head>
 
+<body>
 <div class="container">
 
   <%= link_to "一覧", :controller => "cocktails", :action => "index" %></br>
@@ -42,13 +43,17 @@
 	</br>
 	<%= pie_chart [[cocktail.base, cocktail.bratio],
 	               [cocktail.mixer, cocktail.mratio]],
-	               colors:[cocktail.bcolor,cocktail.mcolor]%>
+	    colors:[cocktail.bcolor,cocktail.mcolor],
+	    library: {backgroundColor: "#e7e2d9"},
+	               height: "200px"%>
 	<% else %>
 	<%= cocktail.other %></br>
 	<%= pie_chart [[cocktail.base, cocktail.bratio],
 	               [cocktail.mixer, cocktail.mratio],
 	               [cocktail.other, cocktail.oratio]],
-	               colors:[cocktail.bcolor,cocktail.mcolor,cocktail.ocolor] %>
+	               colors:[cocktail.bcolor,cocktail.mcolor,cocktail.ocolor],
+	               library: {backgroundColor: "#e7e2d9"},
+	               height: "200px"%>
 	<% end %>
       </div>
       
@@ -57,3 +62,11 @@
   </div>
   <%= paginate @cocktail, :window => 2 %>
 </div>
+</body>
+
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <p class="text-muted">Place sticky footer content here.</p>
+  </div>
+</footer>

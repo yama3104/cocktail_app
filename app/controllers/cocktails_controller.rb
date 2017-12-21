@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-  PER = 9
+  PER = 12
   
   def index
     @cocktail = Cocktail.search(params[:search]).page(params[:page]).per(PER)

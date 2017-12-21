@@ -27,26 +27,34 @@
   </nav>
 </head>
 
-<div class="container">
-
-<p> 名前　 :　<%= @cocktail.name %> </p>
-<p> ベース :　<%= link_to cocktails_path(:search => @cocktail.base) do%> <%= @cocktail.base %> <% end %></p>
-<p> 割材　 :　<%= link_to cocktails_path(:search => @cocktail.mixer) do%> <%= @cocktail.mixer %> <% end %></p>
-<% if @cocktail.other == '' %>
+<body>
+  <div class="container">
+    
+    <p> 名前　 :　<%= @cocktail.name %> </p>
+    <p> ベース :　<%= link_to cocktails_path(:search => @cocktail.base) do%> <%= @cocktail.base %> <% end %></p>
+    <p> 割材　 :　<%= link_to cocktails_path(:search => @cocktail.mixer) do%> <%= @cocktail.mixer %> <% end %></p>
+    <% if @cocktail.other == '' %>
 </br>
 <%= pie_chart [[@cocktail.base, @cocktail.bratio],
-              [@cocktail.mixer, @cocktail.mratio]],
-	      colors:[@cocktail.bcolor,@cocktail.mcolor]%>
+    [@cocktail.mixer, @cocktail.mratio]],
+    colors:[@cocktail.bcolor,@cocktail.mcolor],
+    library: {backgroundColor: "#fff3e6"} %>
 <% else %>
-<p> その他 :　<%= link_to cocktails_path(:search => @cocktail.other) do%> <%= @cocktail.other %> <% end %></p>
-<%= pie_chart [[@cocktail.base, @cocktail.bratio],
-	      [@cocktail.mixer, @cocktail.mratio],
-	      [@cocktail.other, @cocktail.oratio]],
-	      colors:[@cocktail.bcolor,@cocktail.mcolor,@cocktail.ocolor] %>
-<% end %>
+    <p> その他 :　<%= link_to cocktails_path(:search => @cocktail.other) do%> <%= @cocktail.other %> <% end %></p>
+    <%= pie_chart [[@cocktail.base, @cocktail.bratio],
+	[@cocktail.mixer, @cocktail.mratio],
+	[@cocktail.other, @cocktail.oratio]],
+	colors:[@cocktail.bcolor,@cocktail.mcolor,@cocktail.ocolor],
+	library: {backgroundColor: "#fff3e6"}%>
+    <% end %>
+    
+  </div>
+</body>
 
-
-
-
-</div>
+<footer class="footer">
+  <div class="container">
+    <hr>
+    <p class="text-muted">Place sticky footer content here.</p>
+  </div>
+</footer>
 
