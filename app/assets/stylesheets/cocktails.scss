@@ -14,6 +14,18 @@ $colAccent      : #80BBFF; //背景の補色
 
 body { padding-top: 70px; }
 
+footer {
+    ul{
+	text-align: center;
+	li{
+	    display: inline;    
+	}
+    }
+}
+
+
+
+
 .box11{
     padding: 0.5em 1em;
     margin: 2em 0;
@@ -25,4 +37,8 @@ body { padding-top: 70px; }
 .box11 p {
     margin: 0; 
     padding: 0;
+}
+
+.abouttext {
+    text-align: center;
 }

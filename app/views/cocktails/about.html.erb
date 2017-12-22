@@ -11,12 +11,13 @@
 	<a class="navbar-brand" href="/">てきとーカクテル</a></br>	
       </div>
       <div class="collapse navbar-collapse" id="target">
+	<ul class="nav navbar-nav">
+	  <li><a href="/cocktails/about">このサイトについて</a></li>
+	</ul>
 	<div class="navbar-form navbar-right" >
 	  <%= form_tag cocktails_path, class: "form-inline", :method => 'get' do %>
-	  
 	  <%= text_field_tag :search, params[:search], placeholder: "検索", class: "form-control"%>
 	  <%= submit_tag "検索", :class => 'btn btn-default', :name => nil %>
-	  
 	  <% end %>
 	  <%= yield %>
 	</div>
@@ -25,39 +26,40 @@
   </nav>
 </head>
 
-<body>
-<div class="container">
 
-  <div class="row">
-    <% @cocktail.each do |cocktail| %>
-    <div class="col-xs-6 col-md-4">
-      <div class="box11">
-	<h3><%= link_to cocktail.name,cocktail_path(cocktail.id)%></h3>
-	<%= cocktail.base %></br>
-	<%= cocktail.mixer %></br>
-	<% if cocktail.other == '' %>
-	</br>
-	<%= pie_chart [[cocktail.base, cocktail.bratio],
-	               [cocktail.mixer, cocktail.mratio]],
-	    colors:[cocktail.bcolor,cocktail.mcolor],
-	    library: {backgroundColor: "#e7e2d9"},
-	               height: "200px"%>
-	<% else %>
-	<%= cocktail.other %></br>
-	<%= pie_chart [[cocktail.base, cocktail.bratio],
-	               [cocktail.mixer, cocktail.mratio],
-	               [cocktail.other, cocktail.oratio]],
-	               colors:[cocktail.bcolor,cocktail.mcolor,cocktail.ocolor],
-	               library: {backgroundColor: "#e7e2d9"},
-	               height: "200px"%>
-	<% end %>
-      </div>
+
+
+
+<body>
+  <div class="container">
+    <div class="abouttext">
+      <h1>このサイトについて</h1>
+
+      
+      <h3>カクテルの割合</h3>
+      <p>このサイトでは作ったことのないカクテルでも”とりあえず”作れるように、
+	ベースのお酒と割材の比率を明記してあります。<br>
+	書いてある比率で作ってみて、もう少しアルコールが弱いほうがいいなど感じたらアレンジしてみる、という流れがいいと思います。<br>
+	サイト作った人もカクテルに詳しい訳ではないので許してください。</p>
+
+      <h3>円グラフの色</h3>
+      <p>円グラフに使われている色はあくまでその飲み物のイメージカラーです。<br>
+	実際の色と違ってもスルーしてください。<br>
+	（忠実に再現すると色が被りまくってひどいことになりました）</p>
+	
+
+
+	
     </div>
-    <% end %>
   </div>
-  <%= paginate @cocktail, :window => 2 %>
-</div>
+
 </body>
+
+
+
+
+
+
 
 <hr>
 <footer class="footer">

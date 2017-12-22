@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'cocktails/show'
 
+  get 'cocktails/about'
+
   root 'table#show'
 
   resources :cocktails

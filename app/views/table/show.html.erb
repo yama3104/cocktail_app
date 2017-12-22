@@ -14,13 +14,12 @@
       </div>
       <div class="collapse navbar-collapse" id="target">
 	<ul class="nav navbar-nav">
+	  <li><a href="/cocktails/about">このサイトについて</a></li>
 	</ul>
 	<div class="navbar-form navbar-right" >
 	  <%= form_tag cocktails_path, class: "form-inline", :method => 'get' do %>
-	  
 	  <%= text_field_tag :search, params[:search], placeholder: "検索", class: "form-control"%>
 	  <%= submit_tag "検索", :class => 'btn btn-default', :name => nil %>
-	  
 	  <% end %>
 	  <%= yield %>
 	</div>
@@ -28,6 +27,13 @@
     </div>
   </nav>
 </head>
+
+
+
+
+
+
+
 
 <body>
   <div class="container">
@@ -41,34 +47,44 @@
     <h2>お酒から探す</h2>
     <hr>
     <div class="row">
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-3">
 	<div class="box30">
 	  <div class="box-title">ビールを使ったもの</div>
 	  <ul>
 	  <li><p><%= link_to "シャンディーガフ",cocktail_path(1)%></p></li>
 	  <li><p><%= link_to "レッドアイ",cocktail_path(2)%></p></li>
-	  <li><p><%= link_to "もっと見る",cocktails_path(:search => "ビール") %></p></li>
 	  </ul>
+	  <p class="more"><%= link_to "もっと見る",cocktails_path(:search => "ビール") %></p>
 	</div>
       </div>
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-3">
 	<div class="box30">
 	  <div class="box-title">ウォッカを使ったもの</div>
 	  <ul>
 	  <li><p><%= link_to "モスコミュール",cocktail_path(6)%></p></li>
 	  <li><p><%= link_to "ソルティドッグ",cocktail_path(7)%></p></li>
-	  <li><p><%= link_to "もっと見る",cocktails_path(:search => "ウォッカ") %></p></li>
 	  </ul>
+	  <p class="more"><%= link_to "もっと見る",cocktails_path(:search => "ウォッカ") %></p>
 	</div>
       </div>
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-3">
 	<div class="box30">
 	  <div class="box-title">ワインを使ったもの</div>
 	  <ul>
+	    <li><p><%= link_to "カシスオレンジ",cocktail_path(18)%></p></li>
+	    <li><p><%= link_to "カシスソーダ",cocktail_path(19)%></p></li>
+	  </ul>
+	  <p class="more"><%= link_to "もっと見る",cocktails_path(:search => "ワイン") %></p>
+	</div>
+      </div>
+      <div class="col-xs-4 col-md-3">
+	<div class="box30">
+	  <div class="box-title">カシスリキュールを使ったもの</div>
+	  <ul>
 	    <li><p><%= link_to "キティ",cocktail_path(13)%></p></li>
 	    <li><p><%= link_to "オペレーター",cocktail_path(14)%></p></li>
-	    <li><p><%= link_to "もっと見る",cocktails_path(:search => "ワイン") %></p></li>
 	  </ul>
+	  <p class="more"><%= link_to "もっと見る",cocktails_path(:search => "ワイン") %></p>
 	</div>
       </div>
     </div>
@@ -76,24 +92,34 @@
     <h2>割材から探す</h2>
     <hr>
     <div class="row">
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-3">
 	<div class="box30">
 	  <div class="box-title">オレンジジュースを使ったもの</div>
 	  <ul>
 	  <li><p><%= link_to "ファジーネーブル",cocktail_path(4)%></p></li>
 	  <li><p><%= link_to "カシスオレンジ",cocktail_path(18)%></p></li>
-	  <li><p><%= link_to "もっと見る",cocktails_path(:search => "オレンジジュース") %></p></li>
 	  </ul>
+	  <p class="more"><%= link_to "もっと見る",cocktails_path(:search => "オレンジジュース") %></p>
 	</div>
       </div>
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-3">
 	<div class="box30">
 	  <div class="box-title">ソーダ(炭酸水)を使ったもの</div>
 	  <ul>
 	  <li><p><%= link_to "スプリッツァー",cocktail_path(9)%></p></li>
 	  <li><p><%= link_to "パッソアソーダ",cocktail_path(25)%></p></li>
-	  <li><p><%= link_to "もっと見る",cocktails_path(:search => "ソーダ") %></p></li>
 	  </ul>
+	  <p class="more"><%= link_to "もっと見る",cocktails_path(:search => "ソーダ") %></p>
+	</div>
+      </div>
+      <div class="col-xs-4 col-md-3">
+	<div class="box30">
+	  <div class="box-title">ジンジャーエールを使ったもの</div>
+	  <ul>
+	  <li><p><%= link_to "シャンディーガフ",cocktail_path(1)%></p></li>
+	  <li><p><%= link_to "ジンバック",cocktail_path(22)%></p></li>
+	  </ul>
+	  <p class="more"><%= link_to "もっと見る",cocktails_path(:search => "ソーダ") %></p>
 	</div>
       </div>
     </div>
@@ -101,12 +127,20 @@
     
 </body>
 
+
+
+
+
+
+<hr>
 <footer class="footer">
   <div class="container">
-    <hr>
-    <p class="text-muted">Place sticky footer content here.</p>
-  </div>
-</footer>
+    <ul>
+    <li><a href="/">トップ</a>&emsp;</li>
+    <li>&emsp;<%= link_to "カクテル一覧", :controller => "cocktails", :action => "index" %></li>
+    </ul>
+    </div>
+</ul>
 
 <!--
 <table class="table1">
