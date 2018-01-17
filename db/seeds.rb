@@ -23,6 +23,7 @@
 #ソーダ lightskyblue
 #カシス red
 
+=begin
 Cocktail.create(name: 'シャンディーガフ',
                 base: 'ビール',
                 mixer: 'ジンジャーエール',
@@ -310,6 +311,26 @@ Cocktail.create(name: 'パッソアオレンジ',
                 bcolor: 'orangered',
                 mcolor: 'orange',
                 ocolor: '')
+=end
+
+require "csv"
+
+f = CSV.open('db/cocktails_seed.csv')
+f.readline
+
+f.each do |row|
+  Cocktail.create(name: row[0],
+                  base: row[1],
+                  mixer: row[2],
+                  other: row[3],
+                  bratio: row[4],
+                  mratio: row[5],
+                  oratio: row[6],
+                  bcolor: row[7],
+                  mcolor: row[8],
+                  ocolor: row[9],
+                  detail: row[10])
+end
 
 
 

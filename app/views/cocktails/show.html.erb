@@ -36,7 +36,7 @@
     <p> 名前　 :　<%= @cocktail.name %> </p>
     <p> ベース :　<%= link_to cocktails_path(:search => @cocktail.base) do%> <%= @cocktail.base %> <% end %></p>
     <p> 割材　 :　<%= link_to cocktails_path(:search => @cocktail.mixer) do%> <%= @cocktail.mixer %> <% end %></p>
-    <% if @cocktail.other == '' %>
+    <% if @cocktail.other == nil %>
 </br>
 <%= pie_chart [[@cocktail.base, @cocktail.bratio],
     [@cocktail.mixer, @cocktail.mratio]],

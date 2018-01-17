@@ -40,7 +40,7 @@
 	<h3><%= link_to cocktail.name,cocktail_path(cocktail.id)%></h3>
 	<%= cocktail.base %></br>
 	<%= cocktail.mixer %></br>
-	<% if cocktail.other == '' %>
+	<% if cocktail.other == nil %>
 	</br>
 	<%= pie_chart [[cocktail.base, cocktail.bratio],
 	               [cocktail.mixer, cocktail.mratio]],
