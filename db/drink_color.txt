@@ -18,3 +18,4 @@
 牛乳 floralwhite
 レモンジュース lemonchiffon
 パッソア orangered
+トニックウォーター yellow
