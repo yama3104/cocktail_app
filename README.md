@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#てきとーカクテルというタイトルのwebサイトです。
+カクテルのレシピ検索を行えます。
+カクテルに使用するお酒の割合が円グラフで表示されるのでわかりやすいです。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##サイトURL
+https://tekikaku.herokuapp.com/
